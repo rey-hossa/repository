@@ -1,0 +1,1256 @@
+@font-face {
+  font-family: 'd-din';
+  src:url(fonts/d-din/D-DIN.otf) format('otf');
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+  border-radius: 100px;;
+}
+::-webkit-scrollbar-track{
+  background: white;
+}
+::-webkit-scrollbar-thumb{
+  background: #bababa;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: #555;
+}
+
+body{
+  background-color: #fff;
+}
+
+/* --------------------------------------- HEADER --------------------------------------- */
+
+.header-bar{
+  height: 120px;
+  display: flex;
+  justify-content: space-between;        /* Allineamento orizzontale */
+  align-items: flex-start;
+  padding-top: 40px;                  /* Allineamento verticale */
+  padding-left: 4%;
+  padding-right: 4%;
+  /*border: 1px solid red;*/
+
+}
+
+/* _______________________________________________ Logo _______________________________________________ */
+
+.logo{
+  display: flex;
+  cursor: pointer;
+}
+
+#logo-image{
+  width: 10%;
+  border-radius: 100px;
+  border: 2.5px solid black;
+}
+
+.logo-text{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#reyad-hossain {
+  text-decoration: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#l-text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  font-weight: 300;
+}
+
+/* _______________________________________________ Menu _______________________________________________ */
+
+.nav{
+  /*
+  padding-top: 45px;
+  padding-right: 160px;
+  */
+}
+
+.menu {
+  list-style-type: none; /* Cancella pallini */
+  position: relative;
+  z-index: 2;
+}
+
+.menu li {
+  display: inline-block; /* Per eventuali altri elementi di fianco al menu */
+  position: relative;
+  z-index: 2;
+}
+
+.menu li #menu-button {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  transition: all .3s ease; /* "Animazione" transizione */
+}
+
+.menu li #menu-button:hover {
+  color: white;
+}
+
+.features-menu li a:link,
+.features-menu li a:visited {
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.features-menu li a:hover {
+  color: #bfbfbf;
+}
+
+.features-menu{
+  display: none;
+}
+
+.menu li:hover .features-menu {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  border-radius: 5px;
+  padding-top: 10px;
+
+  opacity: 0.8;
+  position: absolute;
+  top: -5px;
+  left: -60px;
+  z-index: 1;
+  box-shadow: 0px 12px 16px #36363624;
+}
+
+.features-menu li {
+  list-style: none;
+  padding: 0px 15px 5px 15px;
+  margin: 4px;
+  margin-left: 0;
+}
+
+.features-menu li:first-of-type{
+  padding-top: 40px;
+}
+
+/* _______________________________________________ Presentation _______________________________________________ */
+
+.presentation {
+  display: flex;
+  position: relative; /* per la scritta developer */
+
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-bottom: 120px;
+
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 12%;
+  position: relative;
+  z-index: 2;
+}
+
+.description span{
+  font-size: 35px;
+  font-weight: 800;
+
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -1px;
+}
+
+.description p {
+  padding-top: 30px;
+  width: 95%;
+}
+
+#photo{
+  width: 45%;
+  align-self: center;
+  position: relative;
+  right: 60px;
+  bottom: 80px;
+
+  z-index: 1;
+
+}
+
+#developer{
+
+  width: 90%;
+  position: absolute;
+  opacity: 0.5;
+  left: 5%;
+  top: 0;
+
+}
+
+/* --------------------------------------- HEADER --------------------------------------- */
+
+
+/* _______________________________________________ My story _______________________________________________ */
+
+.background-image{
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 90%;
+  height: 547px;
+  position: relative;
+  top: -40px;
+}
+
+.background-image img{
+  width: 100%;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.my-story{
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  width: 55%;
+  padding: 50px;
+  padding-top: 80px;
+}
+
+.my-story h2{
+  font-size: 35px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.my-story p{
+  padding-top: 30px;
+  text-align: center;
+}
+
+.my-story .links{
+  display: flex;
+  padding-top: 70px;
+}
+
+.my-story .links a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+.my-story .links a:first-of-type{
+  margin-right: 20px;
+}
+
+.my-story .links a:hover{
+  color: black;
+  background-color: white;
+}
+
+/* _______________________________________________ Skills _______________________________________________ */
+
+:root {
+  --primary: #171717;
+  --text: #363636;
+  --light: #888888;
+}
+
+.skill-section{
+  font-family: 'd-din', sans-serif;
+}
+
+.skill-section header{
+  font-size: 44px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 24px;
+  color: var(--primary);
+}
+
+.skill-section .skill {
+  display: grid;
+  grid-gap: 16px;
+  padding: 16px;
+  max-width: 1024px;
+  margin-inline: auto;
+}
+
+.skill .set {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.skill .set:hover{
+  box-shadow: 0px 12px 16px #36363624;
+}
+
+.set span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 48px;
+  background-color: #262626;
+  color: white;
+  border-radius: 35%;
+  margin-inline: auto;
+}
+.set header {
+  padding-block: 24px;
+  font-size: 24px;
+  color: var(--primary);
+  text-align: center;
+  text-transform: capitalize;
+}
+.set .list {
+  padding-block: 8px;
+  display: grid;
+  grid-template-columns: 1fr 28px;
+  color: var(--light);
+  text-transform: uppercase;
+}
+.set:hover .list {
+  color: var(--text);
+}
+
+@media screen and (min-width: 481px){
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 767px){
+  .skill {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px){
+  .skill {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* _______________________________________________ Formation and Softskills _______________________________________________ */
+
+.formation-and-softskills{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+/* _______________________________________________ Formation _______________________________________________ */
+
+.formation-section{
+  display: flex;
+  flex-direction: column;
+  font-family: 'd-din', sans-serif;
+  margin-left: 15%;
+  width: 35%;
+  padding-top: 50px;
+}
+
+.formation-section header{
+  font-size: 25px;
+  padding: 24px;
+  margin-bottom: 30px;
+  padding-left: 0;
+  color: #616161;
+}
+
+.formation-section header span{
+  font-weight: 700;
+  color: black;
+}
+
+.formation{
+  display: flex;
+  height: 160px;
+  margin-bottom: 25px;
+
+  /*border-left: 5px solid black; */
+  /* background-image: linear-gradient(black, gray, white);*/
+}
+
+.formation:hover{
+  /* box-shadow: 0px 0px 16px #36363624; */
+}
+
+.line{
+  height: 100%;
+  width: 4.5px;
+  border-radius: 100px;
+  background-image: linear-gradient(#adadad,black);
+}
+
+.experience{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.experience span {
+  display: flex;
+  align-items: center;
+}
+
+.experience span i {
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.experience span h2 {
+  font-size: 18px;
+}
+
+.experience p{
+  padding-top: 20px;
+  font-size: 13px;
+  color: gray;
+}
+
+.experience .data{
+  font-weight: bold;
+
+}
+
+
+/* _______________________________________________ Softskills _______________________________________________ */
+
+.soft-skills{
+  font-family: 'd-din', sans-serif;
+  width: 35%;
+  margin-right: 15%;
+  padding-top: 50px;
+}
+
+.soft-skills header{
+  font-size: 25px;
+  padding: 24px;
+  margin-bottom: 30px;
+  color: #616161;
+}
+
+.soft-skills header span{
+  font-weight: 700;
+  color: black;
+}
+
+.wrap{
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.bar{
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.bar h3{
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.bar span{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background: #e3e3e3;
+  border-radius: 50px;
+}
+
+.bar span:before{
+  position: absolute;
+  content: '';
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(to left, black, #adadad);
+  border-radius: 50px;
+  animation: bar 4s ease;
+}
+
+@keyframes bar {
+  from{
+    width: 0;
+  }
+}
+
+.bar:nth-child(1) span:before{
+    width: 70%;
+}
+.bar:nth-child(2) span:before{
+    width: 90%;
+}
+.bar:nth-child(3) span:before{
+    width: 70%;
+}
+.bar:nth-child(4) span:before{
+    width: 100%;
+}
+.bar:nth-child(5) span:before{
+    width: 90%;
+}
+.bar:nth-child(6) span:before{
+    width: 80%;
+}
+.bar:nth-child(7) span:before{
+    width: 90%;
+}
+.bar:nth-child(8) span:before{
+    width: 90%;
+}
+
+
+.altri {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to left, black, gray);
+  margin-top: 20px;
+  border-radius: 5px;
+  opacity: 0.8;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.altri:hover{
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0px 0px 16px #b8b8b8;
+}
+
+.altri span {
+  font-size: 18px;
+  padding-left: 30px;
+}
+
+.altri i {
+  font-size: 30px;
+  padding-right: 20px;
+}
+
+/* _______________________________________________ Esperienze _______________________________________________ */
+
+.experiences-section{
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 30px;
+  position: relative;
+}
+
+.experiences-section header{
+  font-size: 44px;
+  color: #171717;
+  text-align: center;
+  padding: 24px;
+  padding-bottom: 40px;
+  font-weight: 500;
+}
+
+#percorso{
+  width: 90%;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.esperienza-sx,
+.esperienza-dx {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 120px;
+}
+
+
+.esperienza-sx img,
+.esperienza-dx img {
+  width: 55%;
+  margin-right: 5%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #b8b8b8; /* #828282 */
+}
+
+.esperienza-sx .desc,
+.esperienza-dx .desc {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40%;
+  height: auto;
+  padding: 2%;
+  margin-right: 55%;
+  margin-top: 30px;
+
+  color: black;
+  /*background: linear-gradient(to right top, #cfcfcf, white);*/
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  opacity: 1;
+}
+
+.esperienza-dx img {
+  margin-right: 40%;
+}
+.esperienza-dx .desc{
+  margin-right: 5%;
+}
+
+.esperienza-dx img:hover,
+.esperienza-sx img:hover{
+  box-shadow: 0px 0px 16px gray;
+}
+.esperienza-dx .desc:hover,
+.esperienza-sx .desc:hover {
+  box-shadow: 0px 0px 16px #bfbfbf;
+}
+
+.desc h2 {
+  padding-bottom: 20px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.desc p{
+  font-weight: 500;
+  font-size: 15px;
+  color: #363636;
+}
+
+.indietro {
+  margin: auto;
+  margin-bottom: 100px;
+  width: 20%;
+  height: 60px;
+  background: linear-gradient(to left, black, gray);
+  border-radius: 5px;
+  opacity: 0.8;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+
+.indietro:hover{
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0px 0px 16px #b8b8b8;
+}
+
+.indietro span {
+  font-family: 'd-din', sans-serif;
+  color: white;
+  font-size: 18px;
+  padding-right: 40px;
+}
+
+.indietro i {
+  color: white;
+  font-size: 30px;
+  padding-left: 30px;
+}
+
+/* _______________________________________________ Progetti _______________________________________________ */
+
+.progetto{
+  padding-bottom: 110px;
+}
+
+.progetto:first-of-type{
+  padding-top: 50px;
+}
+
+.progetto .desc {
+  background-color: #262626;
+  box-shadow: 0px 0px 16px gray;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.progetto img:hover{
+  box-shadow: 0px 0px 16px #bfbfbf;
+}
+
+.progetto .desc:hover {
+  box-shadow: 0px 0px 16px black;
+}
+
+.progetto .desc h2 {
+  color: white;
+
+}
+
+.progetto .desc p {
+  color: white;
+}
+
+/* _______________________________________________ Piani futuri _______________________________________________ */
+
+.piani-futuri-section{
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.piani-futuri-section header{
+  font-size: 30px;
+  font-weight: 600;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.piani-futuri{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ux-ui-design,
+.digital-marketing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.ux-ui-design{
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-shadow: 0px 0px 16px #36363624;
+}
+
+.digital-marketing{
+  background-color: #262626;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0px 0px 16px gray;
+}
+
+.ux-ui-design:hover{
+  box-shadow: 0px 0px 16px #bfbfbf;
+}
+.digital-marketing:hover{
+  box-shadow: 0px 0px 16px black;
+}
+
+.ux-ui-design h2,
+.digital-marketing h2{
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.ux-ui-design p,
+.digital-marketing p{
+  text-align: center;
+  font-size: 14px;
+}
+
+.digital-marketing h2{
+  color: white;
+}
+.digital-marketing p{
+  color: white;
+}
+
+
+/* _______________________________________________ Footer _______________________________________________ */
+
+footer{
+  margin-top: 140px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+hr{
+  height: 1px;
+  background-color: #adadad;
+  border-radius: 100px;
+  opacity: 0.5;
+}
+
+.footer-section{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 30%;
+}
+
+.contact h2,
+.footer-menu h2,
+.social h2{
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.contact p{
+  padding-bottom: 10px;
+}
+
+.contact span{
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+.contact span i{
+  padding-right: 7px;
+}
+
+.footer-menu{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10%;
+}
+
+.footer-menu a{
+  text-decoration: none;
+  color: gray;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.footer-menu a:hover{
+  color: black;
+}
+
+.social{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5%;
+}
+
+.social a {
+  text-decoration: none;
+  color: black;
+}
+
+.social a:hover{
+  text-decoration: underline;
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  font-size: 9px;
+  color: #bcbcbc;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 767px) { /* Visualizzazione ottimale 400px (Mobile) */
+
+  /* _____________________ Header _____________________ */
+
+  .header-bar{
+    align-items: flex-start;
+    padding-top: 20px;
+    height: 100px;
+  }
+
+  .menu{
+    position: static;
+  }
+
+  .menu li{
+    position: static;
+  }
+
+  .menu li #menu-button {
+    z-index: 3;
+  }
+
+  .menu li:hover .features-menu {
+    top: 0px;
+    left: 0px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-top: 10px;
+    z-index: 2;
+    align-items: center;
+  }
+
+  .features-menu li:first-of-type{
+    padding-top: 60px;
+  }
+  .features-menu li:last-of-type{
+    padding-bottom: 20px;
+  }
+
+  #logo-image{
+    width: 40px;
+    height: 40px;
+  }
+
+  .presentation{
+    flex-direction: column;
+  }
+
+  .description{
+    order: 1;
+  }
+
+  #photo{
+    width: 100%;
+    align-self: center;
+    right: 0;
+    bottom: 0;
+  }
+
+  #developer{
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: 100px;
+    opacity: 0.7;
+  }
+
+  .description{
+    padding-bottom: 0;
+    position: absolute;
+    padding-top: 280px;
+    padding-left: 2%;
+  }
+
+  .description span{
+    font-size: 28px;
+  }
+
+  .description p{
+    padding-top: 20px;
+    font-size: 16px;
+  }
+
+  /* _____________________ My Story _____________________ */
+
+  .background-image{
+    top: 120px;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: 447px;
+  }
+
+  .background-image img{
+    border-radius: 0;
+  }
+
+  .my-story{
+    width: 100%;
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .my-story h2{
+    font-size: 28px;
+  }
+
+  .my-story p{
+    font-size: 15px;
+    padding-top: 20px;
+  }
+
+  .my-story .links{
+    display: inline;
+    padding-top: 30px;
+  }
+
+  /* _____________________ Formation and Softskills _____________________ */
+
+  .formation-and-softskills{
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .formation-section{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    padding-top: 50px;
+  }
+
+  .soft-skills{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    padding-top: 50px;
+  }
+
+  .soft-skills header{
+    padding-left: 0px;
+  }
+
+  .wrap{
+    max-width: 100%;
+  }
+
+  /* _____________________ Esperienze _____________________ */
+
+  .esperienza-sx,
+  .esperienza-dx {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+
+  .esperienza-sx img,
+  .esperienza-dx img {
+    margin: auto;
+    width: 90%;
+  }
+
+  .esperienza-sx .desc,
+  .esperienza-dx .desc {
+    position:relative;
+    order: 1;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    top: -30px;
+    padding: 3%;
+  }
+
+  .indietro {
+    width: 60%;
+  }
+
+  /* _____________________ Progetti _____________________ */
+
+  .progetto:first-of-type{
+    padding-top: 20px;
+  }
+
+  .progetto{
+    padding-bottom: 50px;
+  }
+
+  .progetto:last-of-type{
+    padding-bottom: 50px;
+  }
+
+  /* _____________________ Piani Futuri _____________________ */
+
+  .piani-futuri-section{
+    width: 90%;
+  }
+
+  .piani-futuri{
+    flex-direction: column;
+  }
+
+  .ux-ui-design{
+    width: 100%;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 0;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .digital-marketing{
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 16px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+
+  /* _____________________ Footer _____________________ */
+
+  footer{
+    margin-top: 100px;
+  }
+
+  .footer-section{
+    flex-wrap: wrap;
+  }
+
+  .contact{
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .footer-menu,
+  .social{
+    width: 50%;
+    padding-top: 20px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .footer-menu h2,
+  .social h2{
+    padding-top: 30px;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {/* Visualizzazione ottimale 600px (Casi straordinari) */
+
+  .description{
+    padding-top: 530px;
+  }
+
+  .background-image{
+    top: 150px;
+  }
+
+  .my-story{
+    width: 100%;
+    padding: 0;
+    padding-top: 120px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .skill-section{
+    margin-top: 250px;
+  }
+
+  .formation-section{
+    width: 80%;
+  }
+
+  .soft-skills{
+    width: 80%;
+  }
+
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) { /* Visualizzazione ottimale 900px (Tablet) */
+
+  .presentation{
+    flex-direction: column;
+  }
+
+  .description{
+    order: 1;
+    padding-bottom: 0;
+    position: absolute;
+    width: 100%;
+    top: 327px;
+    padding-left: 7%;
+  }
+
+  #photo{
+    width: 60%;
+    align-self: flex-end;
+    right: 30px;
+
+  }
+
+  #developer{
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: 20px;
+    opacity: 0.7;
+  }
+
+  .background-image{
+    top: 20px;
+  }
+
+  .esperienza-sx,
+  .esperienza-dx {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 0px;
+  }
+
+  .esperienza-sx img,
+  .esperienza-dx img {
+    margin: auto;
+    width: 80%;
+  }
+
+  .esperienza-sx .desc,
+  .esperienza-dx .desc {
+    position:relative;
+    order: 1;
+    width: 70%;
+    height: auto;
+    margin: auto;
+    top: -80px;
+    padding: 3%;
+  }
+
+  .indietro {
+    width: 30%;
+  }
+
+}

@@ -1,0 +1,161 @@
+
+
+----------------------------html--------------------------------
+
+
+<div class="body">
+
+      <section>
+
+        <header>Skills</header>
+        <div class="skill">
+
+          <div class="set">
+            <span class="fas fa-globe"></span>
+            <header>Web Development</header>
+
+            <div class="list">
+              <label>Html</label>
+              <i class="fab fa-html5"></i>
+            </div>
+            <div class="list">
+              <label>Css</label>
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <div class="list">
+              <label>Javascript</label>
+              <i class="fab fa-js"></i>
+            </div>
+            <div class="list">
+              <label>Php</label>
+              <i class="fab fa-php"></i>
+            </div>
+          </div>
+
+          <div class="set">
+            <span class="fas fa-tools"></span>
+            <header>Framework</header>
+
+            <div class="list">
+              <label>Laravel</label>
+              <i class="fab fa-laravel"></i>
+            </div>
+            <div class="list">
+              <label>Node.js</label>
+              <i class="fab fa-node-js"></i>
+            </div>
+            <div class="list">
+              <label>Angular</label>
+              <i class="fab fa-angular"></i>
+            </div>
+            <div class="list">
+              <label>Bootstrap</label>
+              <i class="fab fa-bootstrap"></i>
+            </div>
+          </div>
+
+          <div class="set">
+            <span class="fas fa-mobile-alt"></span>
+            <header>Mobile application</header>
+
+            <div class="list">
+              <label>Android</label>
+              <i class="fab fa-android"></i>
+            </div>
+            <div class="list">
+              <label>Ios</label>
+              <i class="fab fa-css3-apple"></i>
+            </div>
+            <div class="list">
+              <label>React</label>
+              <i class="fab fa-react"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+----------------------------css--------------------------------
+
+
+:root {
+  --primary: #fe58a0;
+  --text: #363636;
+  --light: #888888;
+}
+
+.body{
+  font-family: 'd-din', sans-serif;
+}
+
+section > header{
+  font-size: 44px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 24px;
+  color: var(--primary);
+}
+
+section .skill {
+  display: grid;
+  grid-gap: 16px;
+  padding: 16px;
+  max-width: 1024px;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 600px){
+  .skill {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px){
+  .skill {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill .set {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.skill .set:hover{
+  box-shadow: 0px 12px 16px #36363624;
+}
+
+.set span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 48px;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 35%;
+  margin-inline: auto;
+}
+.set > header {
+  padding-block: 24px;
+  font-size: 24px;
+  color: var(--primary);
+  text-align: center;
+  text-transform: capitalize;
+}
+.set .list {
+  padding-block: 8px;
+  display: grid;
+  grid-template-columns: 1fr 28px;
+  color: var(--light);
+  text-transform: uppercase;
+}
+.set:hover .list {
+  color: var(--text);
+}
